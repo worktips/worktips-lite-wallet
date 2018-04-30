@@ -20,7 +20,7 @@ This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
 - Transfer WTIP
 - Address book
 - CSV export
-- Transaction history
+- Full transactions history
 - Open/backup wallets
 - Import/export wallet keys
 - Create wallet

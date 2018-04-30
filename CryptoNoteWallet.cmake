@@ -1,0 +1,3 @@
+set(CN_PROJECT_NAME "Worktips")
+set(CN_CURRENCY_DISPLAY_NAME "worktips")
+set(CN_CURRENCY_TICKER "WTIP")

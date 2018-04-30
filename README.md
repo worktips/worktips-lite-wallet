@@ -12,6 +12,21 @@ This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
 * Official Whitepaper: [Worktips Whitepaper](http://worktips.info/whitepaper_worktips.zip)
 * Official Block explorer: [Worktips Block explorer](http://blockexplorer.worktips.info)
 
+## Features
+
+- CPU miner support (set core number)
+- Remote node syncing
+- No local blockchain files
+- Transfer WTIP
+- Address book
+- CSV export
+- Transaction history
+- Open/backup wallets
+- Import/export wallet keys
+- Create wallet
+- Encrypt wallet
+
+
 ## How to compile
 
 ### Compile on Linux Ubuntu 16.04

@@ -93,12 +93,13 @@ _Your executables will be located in `build/release` folder._
 
 **2. Install dependencies**
 
-Recommended: Microsoft Visual Studio 15 2017, CMake 3.1.x or later, and Boost 1.58 or later. 
+Recommended: Microsoft Visual Studio 15 2017, CMake 3.1.x or later, Boost 1.58 or later and and Qt 5.10. 
 
 You may download them from:
-- http://www.microsoft.com/
-- http://www.cmake.org/
-- http://www.boost.org/
+- http://www.microsoft.com
+- http://www.cmake.org
+- http://www.boost.org
+- https://www.qt.io
 
 
 **3. Configure and generate the project files**

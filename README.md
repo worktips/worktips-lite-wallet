@@ -44,12 +44,11 @@ sudo apt-get install -y build-essential python-dev gcc-4.9 g++-4.9 git cmake lib
 git clone https://github.com/Vordas/worktips-lite.git worktipslite
 ```
 
-**3. Update core submodule**
+**3. Get the coin source**
 
 ```
 cd worktipslite
-git submodule update --init
-git submodule foreach git pull origin master
+git clone https://github.com/Vordas/worktips.git cryptonote
 ```
 
 **4. Fetch the rocksdb lib**

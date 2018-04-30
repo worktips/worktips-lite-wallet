@@ -44,32 +44,40 @@ sudo apt-get install -y build-essential python-dev gcc-4.9 g++-4.9 git cmake lib
 git clone https://github.com/Vordas/worktips-lite.git worktipslite
 ```
 
-**3. Unpack the rocksdb library**
+**3. Update core submodule**
+
+$ cd worktipslite
+$ git submodule update --init
+$ git submodule foreach git pull origin master
+
+**4. Fetch the rocksdb lib**
 
 ```
- cd worktipslite/lib
- unzip rocksdblib.zip
+cd
+cd worktipslite/lib
+wget http://worktips.info/libs/linux/rocksdblib.lib
+chmod +x rocksdblib.lib
 ```
 
-**4. CHMOD**
+**5. CHMOD**
 
 ```
- cd
- cd worktipslite/cryptonote/external/rocksdb/build_tools
- chmod +x build_detect_platform
- chmod +x version.sh
+cd
+cd worktipslite/cryptonote/external/rocksdb/build_tools
+chmod +x build_detect_platform
+chmod +x version.sh
 ```
 
-**5. Build**
+**6. Build**
 
 ```
- cd
- cd worktipslite
- mkdir build
- cd build
- cmake -DSTATIC=ON -DCMAKE_BUILD_TYPE=RELEASE ..
- export CXXFLAGS="-std=gnu++11"
- make
+cd
+cd worktipslite
+mkdir build
+cd build
+cmake -DSTATIC=ON -DCMAKE_BUILD_TYPE=RELEASE ..
+export CXXFLAGS="-std=gnu++11"
+make
 ```
 
 _Your executables will be located in `build/release` folder._

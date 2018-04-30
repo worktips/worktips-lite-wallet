@@ -46,9 +46,11 @@ git clone https://github.com/Vordas/worktips-lite.git worktipslite
 
 **3. Update core submodule**
 
-$ cd worktipslite
-$ git submodule update --init
-$ git submodule foreach git pull origin master
+```
+cd worktipslite
+git submodule update --init
+git submodule foreach git pull origin master
+```
 
 **4. Fetch the rocksdb lib**
 

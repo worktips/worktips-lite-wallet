@@ -57,4 +57,4 @@ git clone https://github.com/Vordas/worktips-lite.git worktipslite
  make
 ```
 
-_Your executables will be located in `build/src` folder._
+_Your executables will be located in `build/release` folder._

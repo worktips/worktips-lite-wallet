@@ -1,3 +1,5 @@
+## Worktips Lite (GUI Wallet)
+
 This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
 
 * Official homepage: [Worktips](http://worktips.info)
@@ -9,8 +11,6 @@ This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
 * Official Telegram: [Worktips Telegram](https://t.me/joinchat/HOvygRE-6UnWOzoh72NVMA)
 * Official Whitepaper: [Worktips Whitepaper](http://worktips.info/whitepaper_worktips.zip)
 * Official Block explorer: [Worktips Block explorer](http://blockexplorer.worktips.info)
-
-## Worktips Lite (GUI Wallet)
 
 ## How to compile
 

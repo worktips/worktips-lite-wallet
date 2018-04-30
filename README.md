@@ -16,58 +16,45 @@ This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
 
 ### Compile on Linux Ubuntu 16.04
 
-- Dependencies
+**1. Install dependencies**
 
 ```
-$ sudo apt-get update
-$ sudo apt-get install -y build-essential python-dev gcc-4.9 g++-4.9 git cmake libboost-all-dev librocksdb-dev tmux qt5-default qttools5-dev-tools software-properties-common tk8.5 tcl8.5 zip unzip
+sudo apt-get update
+sudo apt-get install -y build-essential python-dev gcc-4.9 g++-4.9 git cmake libboost-all-dev librocksdb-dev tmux qt5-default qttools5-dev-tools software-properties-common tk8.5 tcl8.5 zip unzip
 ```
 
-- Clone the repository
+**2. Clone the repository**
 
 ```
-$ git clone https://github.com/Vordas/worktips-lite.git worktipslite
+git clone https://github.com/Vordas/worktips-lite.git worktipslite
 ```
 
-- Unpack the rocksdb library
+**3. Unpack the rocksdb library**
 
 ```
-$ cd worktipslite/lib
-$ unzip rocksdblib.zip
-```
-  
-- Update core submodule
-
-```
-$ cd
-$ cd worktipslite
-$ git submodule update --init
-$ git submodule foreach git pull origin master
+ cd worktipslite/lib
+ unzip rocksdblib.zip
 ```
 
-- CHMOD
+**4. CHMOD**
 
 ```
-$ cd
-$ cd worktipslite/cryptonote/external/rocksdb/build_tools
-$ cd chmod +x build_detect_platform
-$ chmod +x version.sh
+ cd
+ cd worktipslite/cryptonote/external/rocksdb/build_tools
+ chmod +x build_detect_platform
+ chmod +x version.sh
 ```
 
-- Build
+**5. Build**
 
 ```
-$ cd
-$ cd worktipslite
-$ mkdir build
-$ cd build
-$ cmake -DSTATIC=ON -DCMAKE_BUILD_TYPE=RELEASE ..
-$ make
+ cd
+ cd worktipslite
+ mkdir build
+ cd build
+ cmake -DSTATIC=ON -DCMAKE_BUILD_TYPE=RELEASE ..
+ export CXXFLAGS="-std=gnu++11"
+ make
 ```
 
 _Your executables will be located in `build/src` folder._
-
-
-### Compile on Windows
-
-_Coming soon..._

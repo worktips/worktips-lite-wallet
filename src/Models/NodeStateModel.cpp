@@ -159,9 +159,9 @@ QVariant NodeStateModel::getDisplayRole(const QModelIndex& _index) const {
     if (m_peerCount == 0) {
       return tr("Disconnected");
     } else if (m_peerCount == 1) {
-      return tr("1 peer");
+      return tr("1 network connection");
     } else {
-      return tr("%1 peers").arg(m_peerCount);
+      return tr("%1 network connections").arg(m_peerCount);
     }
   }
 

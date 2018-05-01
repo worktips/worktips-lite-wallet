@@ -52,7 +52,7 @@
      <item>
       <widget class="WalletGui::WalletHeaderLabel" name="m_transactionsTextLabel">
        <property name="text">
-        <string>Transactions</string>
+        <string>HISTORY</string>
        </property>
        <property name="indent">
         <number>0</number>

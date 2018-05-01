@@ -62,7 +62,7 @@
       <item row="1" column="2" colspan="5">
        <widget class="WalletGui::WalletHeaderLabel" name="label">
         <property name="text">
-         <string>Balance</string>
+         <string>BALANCE</string>
         </property>
         <property name="indent">
          <number>0</number>
@@ -386,7 +386,7 @@
         <item alignment="Qt::AlignVCenter">
          <widget class="WalletGui::WalletHeaderLabel" name="m_miningStatusTextLabel">
           <property name="text">
-           <string>Mining status</string>
+           <string>MINING</string>
           </property>
           <property name="indent">
            <number>0</number>

@@ -64,7 +64,7 @@ QString DarkStyle::toolButtonFontColorNormal() const {
 }
 
 QString DarkStyle::toolButtonFontColorDisabled() const {
-  return "#ffb69fff";
+  return "#000000";
 }
 
 QString DarkStyle::toolBarBorderColor() const {

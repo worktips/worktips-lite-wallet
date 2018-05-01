@@ -43,7 +43,7 @@
      <item>
       <widget class="WalletGui::WalletHeaderLabel" name="m_addressBookTextLabel">
        <property name="text">
-        <string>Contacts</string>
+        <string>ADDRESS BOOK</string>
        </property>
       </widget>
      </item>

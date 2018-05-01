@@ -320,7 +320,7 @@
      <item>
       <widget class="WalletGui::WalletHeaderLabel" name="label_6">
        <property name="text">
-        <string>Mining pool list</string>
+        <string>MINING POOLS</string>
        </property>
       </widget>
      </item>

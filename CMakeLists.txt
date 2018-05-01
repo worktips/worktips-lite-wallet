@@ -8,6 +8,14 @@
 
 cmake_minimum_required(VERSION 3.1)
 
+foreach(p
+    CMP0071 # 3.10: Let AUTOMOC and AUTOUIC process GENERATED files
+    )
+  if(POLICY ${p})
+    cmake_policy(SET ${p} NEW)
+  endif()
+endforeach()
+
 #Set build version
 set(VERSION_MAJOR "4")
 set(VERSION_MINOR "0.0")

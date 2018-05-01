@@ -175,7 +175,7 @@ void WalletStatusBar::synchronizationProgressUpdated(quint32 _current, quint32 _
   QString blockchainAge = lastBlockTimestamp > 0 ? QStringLiteral("%1 ago").arg(formattedTimeDiff) : QStringLiteral("%1").arg(formattedTimeDiff);
 
   m_walletIsSynchronized = false;
-  m_syncStatusLabel->setText(tr("Synchronization: %1/%2 (%3)").arg(_current).arg(_total).arg(blockchainAge));
+  m_syncStatusLabel->setText(tr("  Synchronizing with Worktips network: %1/%2").arg(_current).arg(_total).arg(blockchainAge));
   updateSyncState(false);
 }
 
@@ -241,15 +241,15 @@ void WalletStatusBar::updateStatusDescription() {
   quint64 timeDiff = lastLocalBlockTimestamp.msecsTo(currentDateTime);
   QString warningString;
   if (timeDiff > MSECS_IN_HOUR) {
-    warningString.append(QString(" Warning: last block was received %1 hours %2 minutes ago.").
+    warningString.append(QString("").
       arg(timeDiff / MSECS_IN_HOUR).arg((timeDiff % MSECS_IN_HOUR) / MSECS_IN_MINUTE));
   }
 
   if (peerCount == 0) {
-    warningString.append(tr(" No network connection."));
+    warningString.append(tr(" no network connection"));
   }
 
-  QString statusText = tr("Wallet synchronized. Top block height: %1  /  Time (UTC): %2%3");
+  QString statusText = tr(" Synchronized with Worktips network   \   Blockchain height: %1   \   Top block found: %2%3");
   m_syncStatusLabel->setText(statusText.arg(localBlockCount - 1).
     arg(QLocale(QLocale::English).toString(lastLocalBlockTimestamp, "dd MMM yyyy, HH:mm:ss")).
     arg(warningString));

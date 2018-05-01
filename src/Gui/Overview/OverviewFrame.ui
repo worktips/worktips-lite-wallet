@@ -72,7 +72,7 @@
      <item>
       <widget class="WalletGui::WalletHeaderLabel" name="m_overviewTransactionsTextLabel">
        <property name="text">
-        <string>Recent transactions</string>
+        <string>RECENT TRANSACTIONS</string>
        </property>
        <property name="indent">
         <number>0</number>

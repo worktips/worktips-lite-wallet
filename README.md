@@ -1,4 +1,4 @@
-## Worktips Lite (GUI Wallet)
+## Worktips lite wallet for Windows
 
 This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
 
@@ -14,17 +14,28 @@ This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
 
 ## Features
 
-- CPU miner support (set core number)
-- Remote node syncing
-- No local blockchain files
-- Transfer WTIP
+- Lite
+- CPU miner
+- Remote node sync
+- No local blockchain storing
+- Send Worktips
+- Receive Worktips
 - Address book
 - CSV export
-- Full transactions history
-- Open/backup wallets
-- Import/export wallet keys
+- Transactions history
+- Open wallet
+- Backup wallet
+- Import keys
+- Export keys
 - Create wallet
 - Encrypt wallet
+
+## How to use (tested on Windows 7/10 - 32/64 bit)
+
+**1. Backup your CLI wallet file (create a copy for safety)**
+**2. Start Worktips lite wallet for Windows and open your wallet file**
+**3. Synchronize with the network**
+**4. Use**
 
 
 ## How to compile
@@ -34,15 +45,14 @@ This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
 **1. Get sources & libs**
 
 1. Create an account on [GitHub.com](github.com) or log in to an existing one
-2. Fork [Worktips lite](https://github.com/Vordas/worktips-lite.git) or/and download it
-3. Fork [Worktips core](https://github.com/Vordas/worktips.git) or/and download it to 'cryptonote' subfolder inside the Worktips lite repository
-4. Fetch the [rocksdb](http://worktips.info/libs/windows/rocksdblib.lib) and copy it to 'lib' subfolder inside the Worktips lite repository
+2. Fork [Worktips lite wallet for Windows](https://github.com/Vordas/worktips-lite.git) or/and download it
+4. Unzip the rocksdb.zip located in 'lib' folder
 
 **2. Install dependencies**
 
-Recommended: Microsoft Visual Studio 15 2017, CMake 3.1.x or later, Boost 1.58 or later and and Qt 5.10. 
+Recommended: Microsoft Visual Studio 15 2017, CMake 3.1.x or later, Boost 1.58 or later and and Qt 5.10.
 
-You may download them from:
+Get dependencies:
 - http://www.microsoft.com
 - http://www.cmake.org
 - http://www.boost.org

@@ -1,44 +1,37 @@
-## Worktips lite wallet for Windows
+# Worktips lite wallet
 
-This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
-
-* Official homepage: [Worktips](http://worktips.info)
-* Official repository: [Worktips GitHub](https://github.com/Vordas/worktips)
-* Official Announcement thread: [Worktips BitcoinTalk](https://bitcointalk.org/index.php?topic=3086019.0)
-* Official Discord: [Worktips Discord](https://discord.gg/UmZExyz)
-* Official Facebook: [Worktips Facebook](https://www.facebook.com/worktipscoin)
-* Official Twitter: [Worktips Twitter](https://twitter.com/wtipscoin)
-* Official Telegram: [Worktips Telegram](https://t.me/joinchat/HOvygRE-6UnWOzoh72NVMA)
-* Official Whitepaper: [Worktips Whitepaper](http://worktips.info/whitepaper_worktips.zip)
-* Official Block explorer: [Worktips Block explorer](http://blockexplorer.worktips.info)
+_This is the reference code for lite GUI wallet for the [Worktips](https://worktips.info) cryptocurrency._
 
 ## Features
 
-- Lite
 - CPU miner
 - Remote node sync
-- No local blockchain storing
-- Send Worktips
-- Receive Worktips
+- No local blockchain storage
+- Send WTIP
+- Receive WTIP
 - Address book
 - CSV export
 - Transactions history
+- Create wallet
 - Open wallet
 - Backup wallet
 - Import keys
 - Export keys
-- Create wallet
 - Encrypt wallet
 
-## How to use (tested on Windows 7/10 - 32/64 bit)
+## How to use
 
-**1. Backup your CLI wallet file (create a copy for safety)**
+**1. Download the latest release [Worktips Lite](https://github.com/Vordas/worktips-lite-wallet/releases/)**
 
-**2. Start Worktips lite wallet for Windows and open your wallet file**
+**2. Unpack the release package**
 
-**3. Synchronize with the network**
+**3. Backup your CLI wallet file (skip this step if creating a new wallet)**
 
-**4. Use**
+**4. Run `Worktips.exe` and open your wallet file (or create a new one)**
+
+**5. Synchronize with the network**
+
+**6. Use the wallet**
 
 
 ## How to compile
@@ -49,11 +42,11 @@ This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
 
 1. Create an account on [GitHub.com](github.com) or log in to an existing one
 2. Fork [Worktips lite wallet](https://github.com/Vordas/worktips-lite-wallet.git) or/and download it
-3. Unzip the _rocksdb.zip_ located in `lib` folder
+3. Unzip the _rocksdb.zip_ located in the `lib` folder
 
 **2. Install dependencies**
 
-Recommended: Microsoft Visual Studio 15 2017, CMake 3.1.x or later, Boost 1.58 or later and and Qt 5.10.
+Recommended: Microsoft Visual Studio 15 2017, CMake 3.1.x or later, Boost 1.65 or later and Qt 5.10.x
 
 Get dependencies:
 - http://www.microsoft.com

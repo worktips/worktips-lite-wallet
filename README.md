@@ -1,4 +1,4 @@
-## Worktips lite wallet for Windows
+## Worktips lite wallet
 
 This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
 
@@ -32,9 +32,9 @@ This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
 
 ## How to use (tested on Windows 7/10 - 32/64 bit)
 
-**1. Backup your CLI wallet file (create a copy for safety)**
+**1. Backup your CLI wallet file (skip this step if creating a new wallet)**
 
-**2. Start Worktips lite wallet for Windows and open your wallet file**
+**2. Start Worktips lite wallet and open your wallet file (or create a new one)**
 
 **3. Synchronize with the network**
 

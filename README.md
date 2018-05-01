@@ -19,7 +19,7 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 - Export keys
 - Encrypt wallet
 
-## How to use (tested on Windows 7/10 - 32/64 bit)
+## How to use
 
 **1. Backup your CLI wallet file (skip this step if creating a new wallet)**
 

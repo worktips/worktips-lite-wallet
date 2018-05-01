@@ -1,16 +1,6 @@
-## Worktips lite wallet
+# Worktips lite wallet
 
-This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
-
-* Official homepage: [Worktips](http://worktips.info)
-* Official repository: [Worktips GitHub](https://github.com/Vordas/worktips)
-* Official Announcement thread: [Worktips BitcoinTalk](https://bitcointalk.org/index.php?topic=3086019.0)
-* Official Discord: [Worktips Discord](https://discord.gg/UmZExyz)
-* Official Facebook: [Worktips Facebook](https://www.facebook.com/worktipscoin)
-* Official Twitter: [Worktips Twitter](https://twitter.com/wtipscoin)
-* Official Telegram: [Worktips Telegram](https://t.me/joinchat/HOvygRE-6UnWOzoh72NVMA)
-* Official Whitepaper: [Worktips Whitepaper](http://worktips.info/whitepaper_worktips.zip)
-* Official Block explorer: [Worktips Block explorer](http://blockexplorer.worktips.info)
+_This is the reference code for lite GUI wallet for the [Worktips](https://worktips.info) cryptocurrency._
 
 ## Features
 

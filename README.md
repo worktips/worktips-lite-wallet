@@ -21,7 +21,7 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 
 ## How to use
 
-**1. Download the latest release [Worktips Lite](https://github.com/Vordas/worktips-lite-wallet/releases/)**
+**1. Download the latest release of [Worktips Lite wallet](https://github.com/Vordas/worktips-lite-wallet/releases/)**
 
 **2. Unpack the release package**
 

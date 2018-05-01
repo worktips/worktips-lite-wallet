@@ -21,13 +21,17 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 
 ## How to use
 
-**1. Backup your CLI wallet file (skip this step if creating a new wallet)**
+**1. Download the latest release [Worktips Lite](https://github.com/Vordas/worktips-lite-wallet/releases/)**
 
-**2. Start Worktips lite wallet and open your wallet file (or create a new one)**
+**2. Unpack the release package**
 
-**3. Synchronize with the network**
+**3. Backup your CLI wallet file (skip this step if creating a new wallet)**
 
-**4. Use**
+**4. Run `Worktips.exe` and open your wallet file (or create a new one)**
+
+**5. Synchronize with the network**
+
+**6. Use the wallet**
 
 
 ## How to compile

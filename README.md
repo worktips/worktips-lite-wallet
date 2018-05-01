@@ -33,8 +33,11 @@ This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
 ## How to use (tested on Windows 7/10 - 32/64 bit)
 
 **1. Backup your CLI wallet file (create a copy for safety)**
+
 **2. Start Worktips lite wallet for Windows and open your wallet file**
+
 **3. Synchronize with the network**
+
 **4. Use**
 
 
@@ -46,7 +49,7 @@ This is the reference code for [Worktips](https://worktips.info) cryptocurrency.
 
 1. Create an account on [GitHub.com](github.com) or log in to an existing one
 2. Fork [Worktips lite wallet for Windows](https://github.com/Vordas/worktips-lite.git) or/and download it
-4. Unzip the rocksdb.zip located in 'lib' folder
+3. Unzip the rocksdb.zip located in 'lib' folder
 
 **2. Install dependencies**
 

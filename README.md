@@ -38,11 +38,11 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 
 1. Create an account on [GitHub.com](github.com) or log in to an existing one
 2. Fork [Worktips lite wallet](https://github.com/Vordas/worktips-lite-wallet.git) or/and download it
-3. Unzip the _rocksdb.zip_ located in `lib` folder
+3. Unzip the _rocksdb.zip_ located in the `lib` folder
 
 **2. Install dependencies**
 
-Recommended: Microsoft Visual Studio 15 2017, CMake 3.1.x or later, Boost 1.58 or later and and Qt 5.10.
+Recommended: Microsoft Visual Studio 15 2017, CMake 3.1.x or later, Boost 1.65 or later and Qt 5.10.x
 
 Get dependencies:
 - http://www.microsoft.com

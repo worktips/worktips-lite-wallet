@@ -4,20 +4,19 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 
 ## Features
 
-- Lite
 - CPU miner
 - Remote node sync
-- No local blockchain storing
-- Send Worktips
-- Receive Worktips
+- No local blockchain storage
+- Send WTIP
+- Receive WTIP
 - Address book
 - CSV export
 - Transactions history
+- Create wallet
 - Open wallet
 - Backup wallet
 - Import keys
 - Export keys
-- Create wallet
 - Encrypt wallet
 
 ## How to use (tested on Windows 7/10 - 32/64 bit)

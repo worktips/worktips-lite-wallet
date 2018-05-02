@@ -40,22 +40,6 @@ project(rocksdb)
 
 execute_process(COMMAND powershell -Command "Get-Date -format MM_dd_yyyy" OUTPUT_VARIABLE DATE)
 execute_process(COMMAND powershell -Command "Get-Date -format HH:mm:ss" OUTPUT_VARIABLE TIME)
-string(REGEX REPLACE "(..)_(..)_..(..).*" "\\1/\\2/\\3" DATE "${DATE}")
-string(REGEX REPLACE "(..):(.....).*" " \\1:\\2" TIME "${TIME}")
-set(GIT_DATE_TIME ${DATE}${TIME})
-
-string(REGEX REPLACE "\n" "" GIT_DATE_TIME ${GIT_DATE_TIME})
-string(REGEX REPLACE "\r" "" GIT_DATE_TIME ${GIT_DATE_TIME})
-
-find_package(Git)
-
-if (GIT_FOUND AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.git")
-    execute_process(COMMAND $ENV{COMSPEC} /C ${GIT_EXECUTABLE} -C ${CMAKE_CURRENT_SOURCE_DIR} rev-parse HEAD OUTPUT_VARIABLE GIT_SHA)
-else()
-    set(GIT_SHA 0)
-endif()
-
-string(REGEX REPLACE "[^0-9a-f]+" "" GIT_SHA "${GIT_SHA}")
 
 set(BUILD_VERSION_CC ${CMAKE_CURRENT_SOURCE_DIR}/util/build_version.cc)
 

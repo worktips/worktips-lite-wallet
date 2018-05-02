@@ -42,7 +42,7 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 
 1. Create an account on [GitHub.com](github.com) or log in to an existing one
 2. Fork [Worktips lite wallet](https://github.com/Vordas/worktips-lite-wallet.git) or/and download it
-3. Unzip the _rocksdb.zip_ located in the `lib` folder
+3. Unzip the _rocksdb.zip_ located in the `lib` folder and put the file _rocksdblib.lib_ inside the `lib` folder
 
 **2. Install dependencies**
 

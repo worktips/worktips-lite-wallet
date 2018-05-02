@@ -249,7 +249,7 @@ void WalletStatusBar::updateStatusDescription() {
     warningString.append(tr(" no network connection"));
   }
 
-  QString statusText = tr(" Synchronized with Worktips network   \   Blockchain height: %1   \   Found (UTC): %2%3");
+  QString statusText = tr("Synchronized with Worktips network       Blockchain height: %1       Found (UTC): %2%3");
   m_syncStatusLabel->setText(statusText.arg(localBlockCount - 1).
     arg(QLocale(QLocale::English).toString(lastLocalBlockTimestamp, "dd MMM yyyy, HH:mm:ss")).
     arg(warningString));

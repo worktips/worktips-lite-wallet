@@ -399,7 +399,7 @@ void CryptoNoteAdapter::onLocalDaemonNotFound() {
   m_nodeAdapter->deinit();
   nodeAdapter->deleteLater();
   m_nodeAdapter = nullptr;
-  initLocalRpcNode();
+  initInProcessNode();
 }
 
 void CryptoNoteAdapter::configureLogger(Logging::LoggerManager& _logger, const QString& _logFilePath, bool _debug) {

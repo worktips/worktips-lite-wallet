@@ -42,7 +42,6 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 
 1. Create an account on [GitHub.com](github.com) or log in to an existing one
 2. Fork [Worktips lite wallet](https://github.com/Vordas/worktips-lite-wallet.git) or/and download it
-3. Unzip the _rocksdb.zip_ located in the `lib` folder and put the file _rocksdblib.lib_ inside the `lib` folder
 
 **2. Install dependencies**
 
@@ -65,8 +64,9 @@ Get dependencies:
 - after the configuration is done, click the _Generate_ button to generate your project files
 - after successfull generation click the button _Open project_ to start building the binaries
 
-**5. Build**
+**4. Build**
 
+- IMPORTANT: Unzip the _rocksdb.zip_ located in the `lib` folder and put the unzipped file _rocksdb.lib_ inside the `build` folder
 - CMake GUI will open the project in the Microsoft Visual Studio you selected for the configuration
 - wait for the Microsoft Visual Studio to scan and prepare all of the files for the project
 - the scan is finished when the message _Ready_ appears

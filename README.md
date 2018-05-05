@@ -30,7 +30,7 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 
 **3. Backup your CLI wallet file (skip this step if creating a new wallet)**
 
-**4. Run `Worktips.exe` and open your wallet file (or create a new one)**
+**4. Run `Worktips` and open your wallet file (or create a new one)**
 
 **5. Synchronize with the network**
 

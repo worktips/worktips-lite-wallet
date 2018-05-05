@@ -69,7 +69,7 @@ ConnectionOptionsFrame::~ConnectionOptionsFrame() {
 }
 
 void ConnectionOptionsFrame::load() {
-  m_ui->m_localPortSpin->setValue(Settings::instance().getLocalRpcPort());
+  //m_ui->m_localPortSpin->setValue(Settings::instance().getLocalRpcPort());
   QUrl remoteUrl = Settings::instance().getRemoteRpcUrl();
   if (remoteUrl.isEmpty()) {
     m_ui->m_remotePortSpin->setValue(CryptoNote::RPC_DEFAULT_PORT);
@@ -91,6 +91,7 @@ void ConnectionOptionsFrame::load() {
   case ConnectionMethod::REMOTE:
     m_ui->m_remoteRadio->toggle();
     break;
+
   }
 
   remoteHostNameChanged(m_ui->m_remoteHostEdit->text());
@@ -98,7 +99,7 @@ void ConnectionOptionsFrame::load() {
 
 void ConnectionOptionsFrame::save() {
   Settings::instance().setConnectionMethod(static_cast<ConnectionMethod>(m_ui->m_connectionButtonGroup->checkedId()));
-  Settings::instance().setLocalRpcPort(m_ui->m_localPortSpin->value());
+  //Settings::instance().setLocalRpcPort(m_ui->m_localPortSpin->value());
   Settings::instance().setRemoteRpcUrl(QUrl::fromUserInput(QString("%1:%2").arg(m_ui->m_remoteHostEdit->text()).arg(m_ui->m_remotePortSpin->value())));
 }
 

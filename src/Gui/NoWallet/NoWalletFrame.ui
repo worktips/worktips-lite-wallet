@@ -54,7 +54,7 @@
    <item alignment="Qt::AlignHCenter">
     <widget class="WalletGui::WalletHeaderLabel" name="m_welcomeLabel">
      <property name="text">
-      <string>Welcome to Worktips Lite!</string>
+      <string>WORKTIPS LITE</string>
      </property>
     </widget>
    </item>

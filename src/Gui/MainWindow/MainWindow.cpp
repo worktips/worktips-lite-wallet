@@ -299,7 +299,7 @@ void MainWindow::urlReceived(const QUrl& _url) {
     m_addressBookManager->addAddress(label, address, true);
 
     OptionsDialog dlg(m_cryptoNoteAdapter, m_donationManager, m_optimizationManager, m_addressBookModel, this);
-    dlg.setDonationAddress(label, address);
+//    dlg.setDonationAddress(label, address);
     dlg.exec();
   } else if (_url.isValid()) {
     m_ui->m_sendButton->click();

@@ -145,13 +145,13 @@ void OptionsDialog::disableAcceptButton(bool _disable) {
   m_ui->m_okButton->setEnabled(canAccept);
 }
 
-void WalletGui::OptionsDialog::setDonationAddress(const QString& _label, const QString& _address) {
-  QVariantMap params;
-  params.insert("label", _label);
-  params.insert("address", _address);
-  m_ui->m_donationTab->setData(params);
-  int donationTabIndex = m_ui->m_optionsTabWidget->indexOf(m_ui->m_donationTab);
-  m_ui->m_optionsTabWidget->setCurrentIndex(donationTabIndex);
-}
+//void WalletGui::OptionsDialog::setDonationAddress(const QString& _label, const QString& _address) {
+//  QVariantMap params;
+//  params.insert("label", _label);
+//  params.insert("address", _address);
+//  m_ui->m_donationTab->setData(params);
+//  int donationTabIndex = m_ui->m_optionsTabWidget->indexOf(m_ui->m_donationTab);
+//  m_ui->m_optionsTabWidget->setCurrentIndex(donationTabIndex);
+//}
 
 }

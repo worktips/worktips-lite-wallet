@@ -71,7 +71,7 @@
       <item>
        <widget class="QRadioButton" name="m_autoRadio">
         <property name="text">
-         <string>Auto selection</string>
+         <string>MASTERNODE 1</string>
         </property>
         <attribute name="buttonGroup">
          <string notr="true">m_connectionButtonGroup</string>
@@ -81,7 +81,7 @@
       <item alignment="Qt::AlignTop">
        <widget class="WalletGui::WalletSmallGrayTextLabel" name="m_autoHelperLabel">
         <property name="text">
-         <string>Wallet will connect to local Worktips daemon process on port 18238. In case of no local daemon running it will use an in-wallet embedded node implementation.</string>
+         <string>Worktips wallet will use remote node 1 for connection</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -136,7 +136,7 @@
       <item>
        <widget class="QRadioButton" name="m_embeddedRadio">
         <property name="text">
-         <string>Embedded</string>
+         <string>MASTERNODE 2</string>
         </property>
         <attribute name="buttonGroup">
          <string notr="true">m_connectionButtonGroup</string>
@@ -146,7 +146,7 @@
       <item alignment="Qt::AlignTop">
        <widget class="WalletGui::WalletSmallGrayTextLabel" name="m_embeddedHelperLabel">
         <property name="text">
-         <string>An in-wallet embedded Worktips node will be used.</string>
+         <string>Worktips wallet will use remote node 2 for connection</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -206,7 +206,7 @@
         <item>
          <widget class="QRadioButton" name="m_localRadio">
           <property name="text">
-           <string>Local daemon</string>
+           <string>MASTERNODE 3</string>
           </property>
           <attribute name="buttonGroup">
            <string notr="true">m_connectionButtonGroup</string>
@@ -230,27 +230,7 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="label">
-          <property name="text">
-           <string>Port:</string>
-          </property>
-         </widget>
-        </item>
-        <item alignment="Qt::AlignVCenter">
-         <widget class="QSpinBox" name="m_localPortSpin">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="minimum">
-           <number>1</number>
-          </property>
-          <property name="maximum">
-           <number>65535</number>
-          </property>
-          <property name="value">
-           <number>1</number>
-          </property>
-         </widget>
+         <widget class="QLabel" name="label"/>
         </item>
         <item>
          <spacer name="horizontalSpacer_2">
@@ -270,7 +250,7 @@
       <item alignment="Qt::AlignTop">
        <widget class="WalletGui::WalletSmallGrayTextLabel" name="m_localHelperLabel">
         <property name="text">
-         <string>Wallet will connect to local Worktips daemon process. Please specify daemon's port.</string>
+         <string>Worktips wallet will use remote node 3 for connection</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -330,7 +310,7 @@
         <item>
          <widget class="QRadioButton" name="m_remoteRadio">
           <property name="text">
-           <string>Remote daemon</string>
+           <string>CUSTOM</string>
           </property>
           <attribute name="buttonGroup">
            <string notr="true">m_connectionButtonGroup</string>
@@ -424,7 +404,7 @@
       <item alignment="Qt::AlignTop">
        <widget class="WalletGui::WalletSmallGrayTextLabel" name="m_remoteHelperLabel">
         <property name="text">
-         <string>Wallet will connect to Worktips node running on another PC in the local or global network. Please specify IP address or domain name and the port.</string>
+         <string>Worktips wallet will connect to specified Worktips network node</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -525,22 +505,6 @@
     <hint type="destinationlabel">
      <x>498</x>
      <y>263</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>m_localRadio</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>m_localPortSpin</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>81</x>
-     <y>194</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>270</x>
-     <y>193</y>
     </hint>
    </hints>
   </connection>

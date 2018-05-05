@@ -328,7 +328,7 @@ void OverviewHeaderFrame::copyTotalBalance() {
 }
 
 void OverviewHeaderFrame::transactionPoolChanged() {
-  m_ui->m_overviewPoolSizeLabel->setText(tr("%1 transactions").arg(m_transactionPoolModel->rowCount()));
+  m_ui->m_overviewPoolSizeLabel->setText(tr("").arg(m_transactionPoolModel->rowCount()));
 }
 
 void OverviewHeaderFrame::walletStateModelDataChanged(const QModelIndex& _topLeft, const QModelIndex& _bottomRight,

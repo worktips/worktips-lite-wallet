@@ -833,6 +833,8 @@
     <addaction name="m_autostartAction"/>
     <addaction name="m_minimizeToTrayAction"/>
     <addaction name="m_closeToTrayAction"/>
+    <addaction name="separator"/>
+    <addaction name="m_preferencesAction"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -947,7 +949,7 @@
   </action>
   <action name="m_preferencesAction">
    <property name="text">
-    <string>Preferences</string>
+    <string>Connection</string>
    </property>
   </action>
   <action name="m_recentWalletsAction">

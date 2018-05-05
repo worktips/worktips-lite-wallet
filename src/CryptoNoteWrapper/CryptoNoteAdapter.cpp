@@ -334,35 +334,28 @@ void CryptoNoteAdapter::initWalletLogger(bool _debug) {
   configureLogger(m_walletLogger, m_dataDir.absoluteFilePath(WALLET_LOG_FILE_NAME), _debug);
 }
 
-// masternode connection loop
+// connection types
 void CryptoNoteAdapter::initNode() {
   Q_ASSERT(m_nodeAdapter == nullptr);
   switch(m_connectionMethod) {
   case ConnectionMethod::AUTO:
-    // default connection
-    // auto connect to 45.32.5.200 (masternode 1) 
     initAutoConnection();
     break;
   case ConnectionMethod::EMBEDDED:
-    // if default fails
-    // re-direct to failsafe 45.63.91.13 (failsafe)
     initLocalRpcNode();
     break;
   case ConnectionMethod::LOCAL:
-    // if all fail
-    // try auto connection again (masternode 1)
     initLocalRpcNode();
     break;
   case ConnectionMethod::REMOTE:
-    // user specified remote node (custom connection)
     initRemoteRpcNode();
     break;
   }
 }
 
+// masternode 1 auto connection
 void CryptoNoteAdapter::initAutoConnection() {
   WalletLogger::debug(tr("[CryptoNote wrapper] connecting...").arg(CryptoNote::RPC_DEFAULT_PORT));
-  // hardcoded masternode for autoconnect
   m_nodeAdapter = new ProxyRpcNodeAdapter(m_currency, m_coreLogger, m_walletLogger, "45.32.5.200", CryptoNote::RPC_DEFAULT_PORT, this);
   m_nodeAdapter->addObserver(this);
   m_autoConnectionTimerId = startTimer(AUTO_CONNECTION_INTERVAL);
@@ -370,28 +363,26 @@ void CryptoNoteAdapter::initAutoConnection() {
 }
 
 void CryptoNoteAdapter::initInProcessNode() {
-  // re-direct to failsafe remote node
   m_nodeAdapter = new InProcessNodeAdapter(m_currency, m_coreLogger, m_walletLogger, this);
   m_nodeAdapter->addObserver(this);
   m_nodeAdapter->init();
 }
 
+// masternode 2 manual connection
 void CryptoNoteAdapter::initLocalRpcNode() {
-  // local node to failsafe remote node re-direction
-  m_nodeAdapter = new ProxyRpcNodeAdapter(m_currency, m_coreLogger, m_walletLogger, "45.63.91.13", m_localDaemodPort, this);
+  m_nodeAdapter = new ProxyRpcNodeAdapter(m_currency, m_coreLogger, m_walletLogger, "207.246.67.76", CryptoNote::RPC_DEFAULT_PORT, this);
   m_nodeAdapter->addObserver(this);
   m_nodeAdapter->init();
 }
 
+// user specified remote node connection
 void CryptoNoteAdapter::initRemoteRpcNode() {
-  // user specified remote node
   m_nodeAdapter = new ProxyRpcNodeAdapter(m_currency, m_coreLogger, m_walletLogger, m_remoteDaemonUrl.host(), m_remoteDaemonUrl.port(), this);
   m_nodeAdapter->addObserver(this);
   m_nodeAdapter->init();
 }
 
 void CryptoNoteAdapter::onLocalDaemonNotFound() {
-  // re-direct to failsafe remote node
   WalletLogger::debug(tr("[CryptoNote wrapper] connection failed. Reconnecting...").arg(CryptoNote::RPC_DEFAULT_PORT));
   killTimer(m_autoConnectionTimerId);
   m_autoConnectionTimerId = -1;
@@ -399,7 +390,7 @@ void CryptoNoteAdapter::onLocalDaemonNotFound() {
   m_nodeAdapter->deinit();
   nodeAdapter->deleteLater();
   m_nodeAdapter = nullptr;
-  initInProcessNode();
+  initLocalRpcNode();
 }
 
 void CryptoNoteAdapter::configureLogger(Logging::LoggerManager& _logger, const QString& _logFilePath, bool _debug) {

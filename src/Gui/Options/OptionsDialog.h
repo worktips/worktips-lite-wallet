@@ -40,7 +40,7 @@ public:
     IOptimizationManager* _optimizationManager, QAbstractItemModel* _addressBookModel, QWidget* _parent);
   ~OptionsDialog();
 
-  void setDonationAddress(const QString& _label, const QString& _address);
+//  void setDonationAddress(const QString& _label, const QString& _address);
   bool needToRestartApplication() const;
 
   Q_SLOT void accept() override;

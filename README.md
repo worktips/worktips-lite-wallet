@@ -145,7 +145,7 @@ cmake -DSTATIC=ON -DCMAKE_BUILD_TYPE=RELEASE ..
 cd && cd worktips-wallet-lite/lib
 ``
 
-- Unzip the unzip _rocksdb.lib_ library to `build` folder
+- Unzip the _rocksdb.lib_ library to `build` folder
 
 ``
 sudo unzip rocksdb.zip -d ~/worktips-wallet-lite/build

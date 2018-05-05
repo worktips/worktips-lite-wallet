@@ -79,4 +79,4 @@ Get dependencies:
 - Switch solution to 'release'
 - click the _Build_ button from the main menu
 
-_your binaries will be located in the `src/release` folder._
+_Your binaries will be located in the `src/release` folder._

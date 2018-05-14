@@ -24,7 +24,7 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 
 ## How to use
 
-**1. Download the latest release of [Worktips Lite wallet](https://github.com/Vordas/worktips-lite-wallet/releases/)**
+**1. Download the latest release of [Worktips Lite wallet](https://github.com/worktips/worktips-lite-wallet/releases/)**
 
 **2. Unpack the release package**
 
@@ -104,7 +104,7 @@ make all
 **2. Get the source**
 
 ``
-git clone https://github.com/Vordas/worktips-lite-wallet.git worktips-wallet-lite
+git clone https://github.com/worktips/worktips-lite-wallet.git worktips-wallet-lite
 ``
 
 **3. Set permissions**
@@ -190,7 +190,7 @@ Get dependencies:
 **2. Get sources & libs**
 
 1. Create an account on [GitHub.com](github.com) or log in to an existing one
-2. Fork [Worktips lite wallet](https://github.com/Vordas/worktips-lite-wallet.git) or/and download it
+2. Fork [Worktips lite wallet](https://github.com/worktips/worktips-lite-wallet.git) or/and download it
 
 **3. Configure and generate the project files**
 

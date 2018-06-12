@@ -54,7 +54,7 @@
      </property>
      <widget class="WalletGui::ConnectionOptionsFrame" name="m_connectionTab">
       <attribute name="title">
-       <string>ACTIVE NODE</string>
+       <string>NODE OPTIONS</string>
       </attribute>
      </widget>
 

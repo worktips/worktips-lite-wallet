@@ -5,7 +5,7 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 ## Features
 
 - CPU miner
-- Remote node auto connect
+- Remote node sync
 - No local blockchain storage
 - Send WTIP
 - Receive WTIP
@@ -20,6 +20,7 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 - Encrypt wallet
 - Select connecting master node
 - Custom remote node connection
+- Custom local node connection
 
 ## How to use
 
@@ -27,7 +28,7 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 
 **2. Unpack the release package**
 
-**3. Backup your wallet file (skip this step if creating a new wallet)**
+**3. Backup your Worktips wallet file (skip this step if creating a new wallet)**
 
 **4. Run `Worktips` and open your wallet file (or create a new one)**
 
@@ -38,4 +39,4 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 
 ## How to compile
 
-**Coming soon**
+### Coming soon

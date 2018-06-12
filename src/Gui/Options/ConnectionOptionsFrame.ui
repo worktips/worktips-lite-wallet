@@ -71,7 +71,7 @@
       <item>
        <widget class="QRadioButton" name="m_autoRadio">
         <property name="text">
-         <string>MASTERNODE 1</string>
+         <string>AUTO CONNECT</string>
         </property>
         <attribute name="buttonGroup">
          <string notr="true">m_connectionButtonGroup</string>
@@ -81,7 +81,7 @@
       <item alignment="Qt::AlignTop">
        <widget class="WalletGui::WalletSmallGrayTextLabel" name="m_autoHelperLabel">
         <property name="text">
-         <string>Worktips wallet will use remote node 1 for connection</string>
+         <string>Default remote connection</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -136,7 +136,7 @@
       <item>
        <widget class="QRadioButton" name="m_embeddedRadio">
         <property name="text">
-         <string>MASTERNODE 2</string>
+         <string>REMOTE NODE 1</string>
         </property>
         <attribute name="buttonGroup">
          <string notr="true">m_connectionButtonGroup</string>
@@ -146,7 +146,7 @@
       <item alignment="Qt::AlignTop">
        <widget class="WalletGui::WalletSmallGrayTextLabel" name="m_embeddedHelperLabel">
         <property name="text">
-         <string>Worktips wallet will use remote node 2 for connection</string>
+         <string>Wallet will connect to remote node 1</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -206,7 +206,7 @@
         <item>
          <widget class="QRadioButton" name="m_localRadio">
           <property name="text">
-           <string>MASTERNODE 3</string>
+           <string>REMOTE NODE 2</string>
           </property>
           <attribute name="buttonGroup">
            <string notr="true">m_connectionButtonGroup</string>
@@ -250,7 +250,7 @@
       <item alignment="Qt::AlignTop">
        <widget class="WalletGui::WalletSmallGrayTextLabel" name="m_localHelperLabel">
         <property name="text">
-         <string>Worktips wallet will use remote node 3 for connection</string>
+         <string>Wallet will connect to remote node 2</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -404,7 +404,7 @@
       <item alignment="Qt::AlignTop">
        <widget class="WalletGui::WalletSmallGrayTextLabel" name="m_remoteHelperLabel">
         <property name="text">
-         <string>Worktips wallet will connect to specified Worktips network node</string>
+         <string>Wallet will connect to specified node</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>

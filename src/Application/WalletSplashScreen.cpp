@@ -56,7 +56,7 @@ WalletSplashScreen::WalletSplashScreen(QWidget* _parent) :
     QHBoxLayout* layout = new QHBoxLayout(this);
     QPushButton* hideButton = new QPushButton(this);
     hideButton->setStyleSheet(Settings::instance().getCurrentStyle().makeStyleSheet(HIDE_BUTTON_STYLE_SHEET_TEMPLATE));
-    hideButton->setText(tr("Minimize to tray"));
+    hideButton->setText(tr("minimize"));
     hideButton->setCursor(Qt::PointingHandCursor);
     hideButton->setSizePolicy(QSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum));
     hideButton->adjustSize();

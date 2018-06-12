@@ -157,11 +157,11 @@ QVariant NodeStateModel::getDisplayRole(const QModelIndex& _index) const {
     return _index.data(ROLE_NODE_TYPE);
   case COLUMN_PEER_COUNT: {
     if (m_peerCount == 0) {
-      return tr("Disconnected");
+      return tr("disconnected");
     } else if (m_peerCount == 1) {
-      return tr("1 network connection");
+      return tr("1 peer");
     } else {
-      return tr("%1 network connections").arg(m_peerCount);
+      return tr("%1 peers").arg(m_peerCount);
     }
   }
 
@@ -171,7 +171,7 @@ QVariant NodeStateModel::getDisplayRole(const QModelIndex& _index) const {
     return QString::number(m_knownBlockCount);
   case COLUMN_LAST_LOCAL_BLOCK_TIMESTAMP:
     if (m_lastLocalBlockInfo.timestamp == 0) {
-      return tr("Unknown");
+      return tr("unknown");
     }
 
     return QLocale(QLocale::English).toString(QDateTime::fromTime_t(m_lastLocalBlockInfo.timestamp).toUTC(), "dd MMM yyyy, HH:mm:ss");

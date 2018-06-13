@@ -3,7 +3,7 @@ set(UPNPC_BUILD_SHARED OFF CACHE BOOL "Build shared library")
 set(UPNPC_BUILD_TESTS OFF CACHE BOOL "Build test executables")
 set(WITH_MD_LIBRARY OFF CACHE BOOL "Code Generation for static library")
 set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build, options are: Debug, Release, RelWithDebInfo")
-set(STATIC OFF CACHE BOOL "Link libraries statically")
+set(STATIC ON CACHE BOOL "Link libraries statically")
 add_subdirectory(miniupnpc)
 
 if (DO_TESTS)

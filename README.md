@@ -148,7 +148,7 @@ make all
 **2. Get the source**
 
 ``
-git clone https://github.com/worktips/worktips-lite-wallet.git worktips-wallet-lite
+git clone https://github.com/worktips/worktips-lite-wallet.git worktips-lite-wallet
 ``
 
 **3. Set permissions**

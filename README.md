@@ -96,13 +96,7 @@ sudo apt-get update
 - get all dependencies
 
 ``
-sudo apt-get install build-essential python-dev gcc g++ git cmake libboost-all-dev librocksdb-dev qt5-default qttools5-dev-tools software-properties-common autotools-dev libicu-dev libbz2-dev zip unzip libsnappy-dev zlib1g-dev libbz2-dev
-``
-
-- Remove old boost (if boost version too low)
-
-``
-sudo apt-get remove -y libboost-dev libboost-all-dev
+sudo apt-get install build-essential python-dev gcc g++ git cmake qt5-default qttools5-dev-tools software-properties-common autotools-dev libicu-dev libbz2-dev zip unzip libsnappy-dev zlib1g-dev libbz2-dev
 ``
 
 - Install Boost 1.65.0
@@ -189,7 +183,7 @@ cmake -DSTATIC=ON -DCMAKE_BUILD_TYPE=RELEASE ..
 cd && cd worktips-lite-wallet/lib
 ``
 
-- Unzip the _rocksdb.lib_ library to `rocksdb/Release` folder (if the Release folder doesn't exist - create it)
+- Unzip the _rocksdb.lib_ library to `~/worktips-lite-wallet/build/cryptonote/external/rocksdb/Release` folder (if the Release folder doesn't exist - create it)
 
 ``
 sudo unzip rocksdb.zip -d ~/worktips-lite-wallet/build/cryptonote/external/rocksdb/Release

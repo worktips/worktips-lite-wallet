@@ -87,13 +87,13 @@ _Your binaries will be located in the `src/release` folder._
 
 **1. Install dependencies**
 
-- run an update
+- Run an update
 
 ``
 sudo apt-get update
 ``
 
-- get all dependencies
+- Get all dependencies
 
 ``
 sudo apt-get install build-essential python-dev gcc g++ git cmake qt5-default qttools5-dev-tools software-properties-common autotools-dev libicu-dev libbz2-dev zip unzip libsnappy-dev zlib1g-dev libbz2-dev
@@ -147,7 +147,7 @@ git clone https://github.com/worktips/worktips-lite-wallet.git worktips-lite-wal
 
 **3. Set permissions**
 
-- navigate to:
+- Navigate to:
 
 ``
 cd worktips-lite-wallet/cryptonote/external/rocksdb/build_tools

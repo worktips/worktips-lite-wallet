@@ -156,7 +156,7 @@ git clone https://github.com/worktips/worktips-lite-wallet.git worktips-wallet-l
 - navigate to:
 
 ``
-cd worktips-wallet-lite/cryptonote/external/rocksdb/build_tools
+cd worktips-lite-wallet/cryptonote/external/rocksdb/build_tools
 ``
 
 ``
@@ -168,7 +168,7 @@ chmod +x build_detect_platform version.sh
 - Navigate back to source folder
 
 ``
-cd && cd worktips-wallet-lite
+cd && cd worktips-lite-wallet
 ``
 
 - Prepare the build
@@ -186,13 +186,13 @@ cmake -DSTATIC=ON -DCMAKE_BUILD_TYPE=RELEASE ..
 - Navigate to `lib` folder
 
 ``
-cd && cd worktips-wallet-lite/lib
+cd && cd worktips-lite-wallet/lib
 ``
 
 - Unzip the _rocksdb.lib_ library to `rocksdb/Release` folder (if the Release folder doesn't exist - create it)
 
 ``
-sudo unzip rocksdb.zip -d ~/worktips-wallet-lite/build/cryptonote/external/rocksdb/Release
+sudo unzip rocksdb.zip -d ~/worktips-lite-wallet/build/cryptonote/external/rocksdb/Release
 ``
 
 **6. Build**
@@ -200,7 +200,7 @@ sudo unzip rocksdb.zip -d ~/worktips-wallet-lite/build/cryptonote/external/rocks
 - Navigate to `build` folder
 
 ``
-cd && cd worktips-wallet-lite/build
+cd && cd worktips-lite-wallet/build
 ``
 
 - Export flags

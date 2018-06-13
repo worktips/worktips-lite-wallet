@@ -48,7 +48,7 @@ option(WITH_JEMALLOC "build with JeMalloc" OFF)
 option(WITH_SNAPPY "build with SNAPPY" OFF)
 option(WITH_LZ4 "build with lz4" OFF)
 option(WITH_ZLIB "build with zlib" OFF)
-set(STATIC OFF CACHE BOOL "Link libraries statically")
+set(STATIC ON CACHE BOOL "Link libraries statically")
 set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build, options are: Debug, Release, RelWithDebInfo")
 if(MSVC)
   # Defaults currently different for GFLAGS.

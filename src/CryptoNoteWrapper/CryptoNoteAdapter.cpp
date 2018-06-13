@@ -371,7 +371,7 @@ void CryptoNoteAdapter::initInProcessNode() {
 
 // masternode connection
 void CryptoNoteAdapter::initLocalRpcNode() {
-  m_nodeAdapter = new ProxyRpcNodeAdapter(m_currency, m_coreLogger, m_walletLogger, "xx.xx.xx.xx", CryptoNote::RPC_DEFAULT_PORT, this);
+  m_nodeAdapter = new ProxyRpcNodeAdapter(m_currency, m_coreLogger, m_walletLogger, "51.38.125.127", CryptoNote::RPC_DEFAULT_PORT, this);
   m_nodeAdapter->addObserver(this);
   m_nodeAdapter->init();
 }

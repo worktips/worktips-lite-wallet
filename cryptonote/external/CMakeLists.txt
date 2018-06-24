@@ -15,15 +15,11 @@ if(MSVC)
     add_subdirectory(rocksDB EXCLUDE_FROM_ALL)
     set_property(TARGET upnpc-static rocksdb PROPERTY FOLDER "external")
 elseif(NOT MSVC)
-    set_property(TARGET upnpc-static PROPERTY FOLDER "external")
-    add_custom_target(
-       rocksdb
-       COMMAND $(MAKE) rocksdb
-       WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/rocksdb
-    )
-    add_library(rocksdblib STATIC IMPORTED GLOBAL)
-    set_target_properties(rocksdblib PROPERTIES IMPORTED_LOCATION ${PROJECT_BINARY_DIR}/rocksdb/librocksdb.a)
-    add_dependencies(rocksdblib rocksdb)
+    add_subdirectory(rocksdb EXCLUDE_FROM_ALL)
+    set_property(TARGET upnpc-static rocksdb PROPERTY FOLDER "external")
+    #add_library(rocksdb STATIC IMPORTED GLOBAL)
+    set_target_properties(rocksdb PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/rocksdb/librocksdb.a)
+    #add_dependencies(rocksdb)
 endif()
 
 if(DO_TESTS)

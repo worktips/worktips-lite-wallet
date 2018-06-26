@@ -79,7 +79,7 @@ Settings& Settings::instance() {
 
 
 Settings::Settings() : m_p2pBindPort(0), m_cmdLineParser(nullptr) {
-  m_defaultPoolList << "199.247.21.36:3333";
+  m_defaultPoolList << "worktips.work:3333";
 
   Style* lightStyle = new LightStyle();
   Style* darkStyle = new DarkStyle();

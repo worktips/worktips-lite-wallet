@@ -18,7 +18,7 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 - Import keys
 - Export keys
 - Encrypt wallet
-- Select connecting master node
+- Select connecting remote node
 - Custom remote node connection
 - Custom local node connection
 

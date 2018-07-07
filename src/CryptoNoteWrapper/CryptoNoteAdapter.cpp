@@ -356,7 +356,7 @@ void CryptoNoteAdapter::initNode() {
 // masternode connection switch
 void CryptoNoteAdapter::initAutoConnection() {
   WalletLogger::debug(tr("initializing...").arg(CryptoNote::RPC_DEFAULT_PORT));
-  m_nodeAdapter = new ProxyRpcNodeAdapter(m_currency, m_coreLogger, m_walletLogger, "xx.xx.xx.xx", CryptoNote::RPC_DEFAULT_PORT, this);
+  m_nodeAdapter = new ProxyRpcNodeAdapter(m_currency, m_coreLogger, m_walletLogger, "x", CryptoNote::RPC_DEFAULT_PORT, this);
   m_nodeAdapter->addObserver(this);
   m_autoConnectionTimerId = startTimer(AUTO_CONNECTION_INTERVAL);
   m_nodeAdapter->init();

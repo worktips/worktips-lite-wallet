@@ -83,6 +83,30 @@ Get dependencies:
 
 _Your binaries will be located in the `src/release` folder._
 
-### Compile on Ubuntu 16.04 (64 bit)
+### Compile on Ubuntu 16.04 (X64)
 
-**Coming soon**
+**1. Get dependencies**
+
+sudo apt-get install -y build-essential python-dev gcc g++ git libboost-all-dev librocksdb-dev qt5-default qttools5-dev-tools cmake
+
+**2. Get the source**
+
+git clone https://github.com/worktips/worktips-lite-wallet.git worktips-lite-wallet
+
+cd worktips-lite-wallet/cryptonote/external/rocksdb/build_tools
+
+chmod +x build_detect_platform version.sh
+
+**3. Build**
+
+cd && cd worktips-lite-wallet
+
+mkdir build && cd $_
+
+cmake -DSTATIC=ON -DCMAKE_BUILD_TYPE=RELEASE ..
+
+export CXXFLAGS="-std=gnu++11"
+
+make
+
+_Your binaries will be located in the `build/src` folder._

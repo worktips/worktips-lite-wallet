@@ -83,7 +83,7 @@ Get dependencies:
 
 _Your binaries will be located in the `src/release` folder._
 
-### Compile on Ubuntu 16.04 (X64)
+### Compile on Ubuntu 16.04 (x64) / 18.04 (x64)
 
 **1. Get dependencies**
 

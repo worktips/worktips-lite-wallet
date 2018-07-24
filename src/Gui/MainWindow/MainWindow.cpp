@@ -107,7 +107,7 @@ MainWindow::MainWindow(ICryptoNoteAdapter* _cryptoNoteAdapter, IAddressBookManag
   m_addRecipientAction(new QAction(this)), m_styleSheetTemplate(_styleSheetTemplate), m_walletStateMapper(new QDataWidgetMapper(this)),
   m_syncMovie(new QMovie(Settings::instance().getCurrentStyle().getWalletSyncGifFile(), QByteArray(), this)) {
   m_ui->setupUi(this);
-  setWindowTitle(tr("Worktips Lite Wallet v1.0.2.3"));
+  setWindowTitle(tr("Worktips Lite Wallet v1.0.3"));
   m_addRecipientAction->setObjectName("m_addRecipientAction");
   m_cryptoNoteAdapter->addObserver(this);
   m_cryptoNoteAdapter->getNodeAdapter()->getWalletAdapter()->addObserver(this);

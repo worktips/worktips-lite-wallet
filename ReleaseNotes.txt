@@ -1,10 +1,5 @@
-# Worktips lite wallet v1.0.2.3
+# Worktips lite wallet v1.0.3
 
-## Change log for v1.0.2.3 release
+## Change log for v1.0.3 release
 
-- connection bug fixes
-- better remote node connection handling
-- minor menu updates
-- minor GUI updates
-- various fixes and code cleanups
-- wallet now loads even if remote node is down
+- updated source

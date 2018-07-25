@@ -36,6 +36,24 @@ _This is the reference code for lite GUI wallet for the [Worktips](https://workt
 
 **6. Use the wallet**
 
+## Troubleshooting
+
+### Ubuntu
+
+- in case of issues starting up the wallet, please run it from the terminal with:
+
+`sudo ./Worktips`
+
+- in case of missing QT libs please run the following command from the terminal:
+
+`sudo apt-get install -y qt5-default`
+
+### Windows 10
+
+- in case of not being able to start the wallet run it as Administrator
+- in case of missing dependencies open the wallet folder and install the file: 'vcredist_x64.exe' 
+
+
 ## How to compile
 
 ### Compile on Windows 7/10 (64 bit)

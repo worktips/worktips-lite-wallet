@@ -17,8 +17,8 @@ foreach(p
 endforeach()
 
 #Set build version
-set(VERSION_MAJOR "4")
-set(VERSION_MINOR "0.0")
+set(VERSION_MAJOR "1")
+set(VERSION_MINOR "0.3")
 set(VERSION "${VERSION_MAJOR}.${VERSION_MINOR}")
 find_package(Git QUIET)
 if(Git_FOUND OR GIT_FOUND)

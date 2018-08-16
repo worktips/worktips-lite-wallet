@@ -42,19 +42,21 @@ public:
 
   size_t timestampCheckWindow() const { return m_timestampCheckWindow; }
   uint64_t blockFutureTimeLimit() const { return m_blockFutureTimeLimit; }
-  uint64_t blockFutureTimeLimit(uint32_t blockHeight) const 
+   uint64_t blockFutureTimeLimit(uint32_t blockHeight) const 
   { 
-       if (blockHeight >= CryptoNote::parameters::LWMA_2_DIFFICULTY_BLOCK_INDEX)  
+      if (blockHeight >= CryptoNote::parameters::LWMA_2_DIFFICULTY_BLOCK_INDEX_V2)
+      {
+          return CryptoNote::parameters::CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V4;
+      }
+      else if (blockHeight >= CryptoNote::parameters::LWMA_2_DIFFICULTY_BLOCK_INDEX)
       {  
           return CryptoNote::parameters::CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3;  
       } 
-
       else  
       {  
           return m_blockFutureTimeLimit;  
       }  
   } 
-
 
   uint64_t moneySupply() const { return m_moneySupply; }
   unsigned int emissionSpeedFactor() const { return m_emissionSpeedFactor; }
@@ -128,11 +130,10 @@ size_t difficultyBlocksCountByBlockVersion(uint8_t blockMajorVersion, uint32_t h
   const BlockTemplate& genesisBlock() const { return cachedGenesisBlock->getBlock(); }
   const Crypto::Hash& genesisBlockHash() const { return cachedGenesisBlock->getBlockHash(); }
 
-uint8_t getEmissionSpeedFactorByBlockMajorVersion(uint8_t blockMajorVersion) const; 
-uint8_t getEmissionSmoothingFactorByBlockMajorVersion(uint8_t blockMajorVersion) const;
-bool getBlockReward(uint8_t blockMajorVersion, size_t medianSize, size_t currentBlockSize, uint64_t alreadyGeneratedCoins, uint64_t fee, uint64_t& reward, int64_t& emissionChange) const; 
-
-
+  uint8_t getEmissionSpeedFactorByBlockMajorVersion(uint8_t blockMajorVersion) const; 
+  uint8_t getEmissionSmoothingFactorByBlockMajorVersion(uint8_t blockMajorVersion) const; 
+  bool getBlockReward(uint8_t blockMajorVersion, size_t medianSize, size_t currentBlockSize, uint64_t alreadyGeneratedCoins, uint64_t fee, uint64_t& reward, int64_t& emissionChange) const; 
+  
   size_t maxBlockCumulativeSize(uint64_t height) const;
 
   bool constructMinerTx(uint8_t blockMajorVersion, uint32_t height, size_t medianSize, uint64_t alreadyGeneratedCoins, size_t currentBlockSize,
@@ -152,12 +153,13 @@ bool getBlockReward(uint8_t blockMajorVersion, size_t medianSize, size_t current
   std::string formatAmount(int64_t amount) const;
   bool parseAmount(const std::string& str, uint64_t& amount) const;
 
-  Difficulty getNextDifficulty(uint8_t version, uint32_t blockIndex, std::vector<uint64_t> timestamps, std::vector<Difficulty> cumulativeDifficulties) const;
 
+ 
+  Difficulty getNextDifficulty(uint8_t version, uint32_t blockIndex, std::vector<uint64_t> timestamps, std::vector<Difficulty> cumulativeDifficulties) const;   
   Difficulty nextDifficulty(std::vector<uint64_t> timestamps, std::vector<Difficulty> cumulativeDifficulties) const;
 Difficulty nextDifficulty(uint8_t version, uint32_t blockIndex, std::vector<uint64_t> timestamps, std::vector<Difficulty> cumulativeDifficulties) const;
-
-Difficulty nextDifficultyV3(std::vector<uint64_t> timestamps, std::vector<Difficulty> cumulative_difficulties) const;
+  Difficulty nextDifficultyV3(std::vector<uint64_t> timestamps, std::vector<Difficulty> cumulative_difficulties) const; 
+  Difficulty nextDifficultyV4(std::vector<std::uint64_t> timestamps, std::vector<Difficulty> cumulativeDifficulties) const;
 
   bool checkProofOfWorkV1(Crypto::cn_context& context, const CachedBlock& block, Difficulty currentDifficulty) const;
   bool checkProofOfWorkV2(Crypto::cn_context& context, const CachedBlock& block, Difficulty currentDifficulty) const;
@@ -271,7 +273,6 @@ public:
   CurrencyBuilder& blockFutureTimeLimit(uint64_t val) { m_currency.m_blockFutureTimeLimit = val; return *this; }
 
   CurrencyBuilder& moneySupply(uint64_t val) { m_currency.m_moneySupply = val; return *this; }
-
   CurrencyBuilder& genesisBlockReward(uint64_t val) { m_currency.m_genesisBlockReward = val; return *this; }
 
   CurrencyBuilder& rewardBlocksWindow(size_t val) { m_currency.m_rewardBlocksWindow = val; return *this; }
@@ -310,6 +311,7 @@ public:
   CurrencyBuilder& upgradeHeightV3(uint32_t val) { m_currency.m_upgradeHeightV3 = val; return *this; }
   CurrencyBuilder& upgradeHeightV4(uint32_t val) { m_currency.m_upgradeHeightV4 = val; return *this; }
   CurrencyBuilder& upgradeHeightV5(uint32_t val) { m_currency.m_upgradeHeightV5 = val; return *this; }
+  
   CurrencyBuilder& upgradeVotingThreshold(unsigned int val);
   CurrencyBuilder& upgradeVotingWindow(uint32_t val) { m_currency.m_upgradeVotingWindow = val; return *this; }
   CurrencyBuilder& upgradeWindow(uint32_t val);

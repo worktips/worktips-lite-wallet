@@ -4,7 +4,7 @@
 
 - updated source
 - added exporting of private keys to GUI lite wallet (keys format is now cross compatible with simplewallet). Thanks to Iridium devs.
-
+- updated splash image
 
 # Worktips lite wallet v1.0.3
 

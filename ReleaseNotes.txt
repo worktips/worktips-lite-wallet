@@ -1,3 +1,11 @@
+# Worktips lite wallet v1.0.3.1
+
+## Change log for v1.0.3.1 release
+
+- updated source
+- added exporting of private keys to GUI lite wallet (keys format is now cross compatible with simplewallet). Thanks to Iridium devs.
+- updated splash image
+
 # Worktips lite wallet v1.0.3
 
 ## Change log for v1.0.3 release

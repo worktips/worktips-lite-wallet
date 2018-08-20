@@ -65,8 +65,8 @@ if(MSVC)
   set(SIMPLE_WALLET_SOURCES_OS
     BinaryInfo/simplewallet.rc
   )
-  set(POOLWALLET_SOURCES_OS
-    BinaryInfo/poolwallet.rc
+  set(POOLWALLET_SOURCES_OS 
+    BinaryInfo/poolwallet.rc  
   )
   set(MINER_SOURCES_OS
     BinaryInfo/miner.rc
@@ -94,16 +94,16 @@ target_link_libraries(CryptoNoteCore Common Crypto Logging Serialization)
 target_link_libraries(P2P CryptoNoteCore Logging ${Boost_LIBRARIES} upnpc-static)
 target_link_libraries(Rpc CryptoNoteCore Logging P2P)
 if(MSVC)
-	target_link_libraries(Daemon P2P Rpc Serialization System Http Logging CryptoNoteCore Crypto Common rocksdb ${Boost_LIBRARIES} )
+  target_link_libraries(Daemon P2P Rpc Serialization System Http Logging CryptoNoteCore Crypto Common rocksdb ${Boost_LIBRARIES} )
 else()
-	target_link_libraries(Daemon P2P Rpc Serialization System Http Logging CryptoNoteCore Crypto Common rocksdblib ${Boost_LIBRARIES} )
+  target_link_libraries(Daemon P2P Rpc Serialization System Http Logging CryptoNoteCore Crypto Common rocksdblib ${Boost_LIBRARIES} )
 endif()
 target_link_libraries(SimpleWallet Mnemonics Wallet NodeRpcProxy Transfers Rpc Http CryptoNoteCore System Logging Common ${Boost_LIBRARIES})
 target_link_libraries(PaymentGate Mnemonics)
 if(MSVC)
-	target_link_libraries(PaymentGateService PaymentGate JsonRpcServer Wallet NodeRpcProxy Transfers CryptoNoteCore Crypto Rpc Http System Logging Common InProcessNode rocksdb ${Boost_LIBRARIES})
+  target_link_libraries(PaymentGateService PaymentGate JsonRpcServer Wallet NodeRpcProxy Transfers CryptoNoteCore Crypto Rpc Http System Logging Common InProcessNode rocksdb ${Boost_LIBRARIES})
 else()
-	target_link_libraries(PaymentGateService PaymentGate JsonRpcServer Wallet NodeRpcProxy Transfers CryptoNoteCore Crypto Rpc Http System Logging Common InProcessNode rocksdblib ${Boost_LIBRARIES})
+  target_link_libraries(PaymentGateService PaymentGate JsonRpcServer Wallet NodeRpcProxy Transfers CryptoNoteCore Crypto Rpc Http System Logging Common InProcessNode rocksdblib ${Boost_LIBRARIES})
 endif()
 target_link_libraries(PoolWallet Wallet NodeRpcProxy Transfers Rpc P2P upnpc-static Http Serialization CryptoNoteCore System Logging Common Crypto ${Boost_LIBRARIES})
 target_link_libraries(Miner CryptoNoteCore Rpc Serialization System Http Logging Common Crypto ${Boost_LIBRARIES})
@@ -115,7 +115,6 @@ add_dependencies(Rpc version)
 add_dependencies(Daemon version)
 add_dependencies(SimpleWallet version)
 add_dependencies(PaymentGateService version)
-add_dependencies(PoolWallet version)
 add_dependencies(P2P version)
 
 # Finally build the binaries
